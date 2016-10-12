@@ -1,0 +1,59 @@
+{
+  "name": "st.ngn.customdummy01",
+  "version": "0.0.1-alpha00-build001",
+  "description": "ST Engine Custom Dummy 01",
+  "author": "Unlevel Team <unlevelteam@gmail.com>",
+  "readme": "ST Engine Custom Dummy 01",
+  "readmeFilename": "readme.md",
+  "scripts": {
+    "toES5": "gulp babel",
+    "jsDocs": "gulp docs"
+  },
+  "files": [
+    ".gitignore",
+    "package.json",
+    "src/",
+    "lib/",
+    "lib_es5/",
+    "readme.md",
+    "jsdoc_conf.json",
+    "gulpfile.js"
+  ],
+  "main": "src/customDummy01.js",
+  "engines": { 
+  	"node" : ">=0.10.3" 
+  },
+  "os": [ "darwin", "linux", "win32", "win64" ],
+  "cpu": [ "x64", "ia32", "arm" ],
+  "keywords": [
+    "st.engines",
+    "st",
+    "IoT",
+    "SomeThings",
+    "sensor",
+    "actuator",
+    "engine"
+  ],
+  "dependencies": {
+    "body-parser": "~1.15",
+    "source-map-support": "*"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "*",
+    "browserify": "^13.0.1",
+    "gulp": "*",
+    "gulp-babel": "*",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "^1.5.4",
+    "jsdoc": "*",
+    "pump": "^1.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "vinyl-transform": "^1.0.0"
+  },
+  "analyze": true,
+  "license": "MIT",
+  "private": true
+}
