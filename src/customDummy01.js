@@ -361,6 +361,24 @@ function _get_NGNInterface (options) {
 	
 	let _ngnDummy01 = new STngnCustom_Dummy01(options.config);
 	_ngnDummy01.initialize();
+	
+	
+	// Set custom options
+	let _customOptions = [
+		{
+			'name': 'ticks',
+			'type': 'number'
+		},
+		{
+			'name': 'showTime',
+			'type': 'boolean'
+		},
+		{
+			'name': 'showDeltaTime',
+			'type': 'boolean'
+		}
+	];
+	
 
 	let _ngnInterface = {
 		'name': _ngnDummy01.name,
@@ -370,6 +388,7 @@ function _get_NGNInterface (options) {
 		'baseNGN': 'SimpleLoop',
 		
 		'custom_engine': _ngnDummy01,
+		'custom_options': _customOptions,
 		'getOptions': _ngnDummy01._getOptions,
 		'setOptions': _ngnDummy01._setOptions
 	
