@@ -1,6 +1,6 @@
 {
   "name": "st.ngn.customdummy01",
-  "version": "0.0.1-alpha00-build001",
+  "version": "0.0.1-beta00-build001",
   "description": "ST Engine Custom Dummy 01",
   "author": "Unlevel Team <unlevelteam@gmail.com>",
   "readme": "ST Engine Custom Dummy 01",
@@ -19,7 +19,7 @@
     "jsdoc_conf.json",
     "gulpfile.js"
   ],
-  "main": "src/customDummy01.js",
+  "main": "lib_es5/customDummy01.js",
   "engines": { 
   	"node" : ">=0.10.3" 
   },
