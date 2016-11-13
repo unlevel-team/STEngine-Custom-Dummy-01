@@ -91,9 +91,9 @@ class STngnCustom_Dummy01 {
 		let _options = _ngn._options;
 		
 		
-		console.log('<~i~> STngnCustom_Dummy01 (initialize):');	// TODO REMOVE DEBUG LOG
-		console.log(_config);	// TODO REMOVE DEBUG LOG
-		console.log(_options);	// TODO REMOVE DEBUG LOG
+		// console.log('<~i~> STngnCustom_Dummy01 (initialize):');	// TODO REMOVE DEBUG LOG
+		// console.log(_config);	// TODO REMOVE DEBUG LOG
+		// console.log(_options);	// TODO REMOVE DEBUG LOG
 
 		
 		if (_config.showTime === false) {
@@ -113,6 +113,9 @@ class STngnCustom_Dummy01 {
 	}
 	
 	
+	/**
+	 * Map engine events
+	 */
 	_mapEngineEvents(options) {
 		
 		if (options === undefined) {
@@ -134,10 +137,12 @@ class STngnCustom_Dummy01 {
 			
 		});
 
-
 	}
 	
 	
+	/**
+	 * Main loop tick function
+	 */
 	_event_MainLoopTick(options) {
 		
 		let _ngn = this;
@@ -150,7 +155,7 @@ class STngnCustom_Dummy01 {
 		let _data = options.data;
 		
 		
-		console.log('<~i~> STngnCustom_Dummy01 (_event_MainLoopTick):');	// TODO REMOVE DEBUG LOG
+		// console.log('<~i~> STngnCustom_Dummy01 (_event_MainLoopTick):');	// TODO REMOVE DEBUG LOG
 
 		
 		_ngn._ticks++;
@@ -306,8 +311,6 @@ class STngnCustom_Dummy01 {
 	}
 	
 	
-	
-	
 }
 
 
@@ -340,13 +343,12 @@ function _get_NGNInterface (options) {
 	let _st = options.st;
 	*/
 	
-	console.log('<~i~> STngnCustom_Dummy01 (_get_NGNInterface):');	// TODO REMOVE DEBUG LOG
-	console.log(options);	// TODO REMOVE DEBUG LOG
+	// console.log('<~i~> STngnCustom_Dummy01 (_get_NGNInterface):');	// TODO REMOVE DEBUG LOG
+	// console.log(options);	// TODO REMOVE DEBUG LOG
 
 	if (options.config.bngnOptions === undefined) {
 		throw 'config.bngnOptions option is required.';
 	}
-	console.log(options.config.bngnOptions);	// TODO REMOVE DEBUG LOG
 	let _bngnOptions = options.config.bngnOptions;
 	
 	// Set engine type
