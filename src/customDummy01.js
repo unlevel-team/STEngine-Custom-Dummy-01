@@ -50,7 +50,7 @@ class STngnCustom_Dummy01 {
 		}
 		
 		let _config = {};
-		if (options.config === undefined) {
+		if (options.config !== undefined) {
 			_config = options.config;
 		}
 		
@@ -89,6 +89,12 @@ class STngnCustom_Dummy01 {
 		
 		let _config = _ngn._config
 		let _options = _ngn._options;
+		
+		
+		console.log('<~i~> STngnCustom_Dummy01 (initialize):');	// TODO REMOVE DEBUG LOG
+		console.log(_config);	// TODO REMOVE DEBUG LOG
+		console.log(_options);	// TODO REMOVE DEBUG LOG
+
 		
 		if (_config.showTime === false) {
 			_options.showTime = false;
@@ -359,7 +365,13 @@ function _get_NGNInterface (options) {
 	}
 	
 	
-	let _ngnDummy01 = new STngnCustom_Dummy01(options.config);
+	let _ntnCustomOptions = {
+		'config': options.config.config,
+		'bngnOptions': options.config.bngnOptions
+
+	};
+	
+	let _ngnDummy01 = new STngnCustom_Dummy01(_ntnCustomOptions);
 	_ngnDummy01.initialize();
 	
 	
@@ -367,15 +379,20 @@ function _get_NGNInterface (options) {
 	let _customOptions = [
 		{
 			'name': 'ticks',
-			'type': 'number'
+			'type': 'number',
+			'description': 'Number of ticks to wait...'
 		},
 		{
 			'name': 'showTime',
-			'type': 'boolean'
+			'type': 'boolean',
+			'alias': 'Show time',
+			'description': 'Show time or not'
 		},
 		{
 			'name': 'showDeltaTime',
-			'type': 'boolean'
+			'type': 'boolean',
+			'alias': 'Show delta time',
+			'description': 'Show delta time or not'
 		}
 	];
 	
